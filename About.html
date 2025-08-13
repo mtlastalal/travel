@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Travel Smart</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero-about {
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        .hero-about h1 {
+            font-size: 3.2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+
+        /* Team Cards */
+        .team-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 50px 0 20px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .social-icons a {
+            font-size: 18px;
+            margin-right: 10px;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            background: #222;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Travel Smart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sevices.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transport.html">Transport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tripcatalog.html">Trip Catalog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-about mt-5">
+        <h1>About Travel Smart</h1>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Travel"
+                        class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">Who We Are</h2>
+                    <p class="text-muted">
+                        At <strong>Travel Smart</strong>, we do more than plan trips — we design unforgettable
+                        experiences.
+                        From hidden mountain trails to bustling city streets, we connect travelers with destinations
+                        that inspire, challenge, and delight.
+                        Every journey we curate blends comfort, adventure, and cultural immersion, ensuring that our
+                        travelers return not just with photos, but with stories worth sharing.
+                    </p>
+                    <p class="text-muted">
+                        Since our founding, we’ve proudly guided thousands of explorers across continents, from serene
+                        beaches in the Maldives to the vibrant souks of Marrakech.
+                        Our expert team combines industry knowledge, local insights, and a passion for travel to craft
+                        packages that suit every style and budget.
+                        With <strong>Travel Smart</strong>, the world isn’t just a place you visit — it’s a journey you
+                        live.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h3 class="fw-bold"><i class="fas fa-bullseye text-primary"></i> Our Mission</h3>
+                    <p>
+                        To make global exploration accessible to everyone by offering expertly tailored itineraries,
+                        competitive pricing, and seamless services.
+                        We strive to remove the stress from travel planning, allowing our customers to focus on what
+                        truly matters — discovering the beauty and diversity of our planet.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bold"><i class="fas fa-eye text-primary"></i> Our Vision</h3>
+                    <p>
+                        To be the world’s most trusted travel companion — inspiring curiosity, promoting cultural
+                        understanding,
+                        and fostering a global community of responsible and passionate explorers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Meet Our Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4 team-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-3 shadow"
+                        width="140" height="140">
+                    <h5>John Smith</h5>
+                    <p class="text-muted">Founder & CEO — Visionary leader with over 15 years of experience in the
+                        travel and tourism industry.</p>
+                </div>
+                <div class="col-md-4 team-card">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle mb-3 shadow"
+                        width="140" height="140">
+                    <h5>Emily Johnson</h5>
+                    <p class="text-muted">Senior Travel Consultant — Expert in crafting personalized itineraries that
+                        balance adventure and relaxation.</p>
+                </div>
+                <div class="col-md-4 team-card">
+                    <img src="https://randomuser.me/api/portraits/men/76.jpg" class="rounded-circle mb-3 shadow"
+                        width="140" height="140">
+                    <h5>Michael Brown</h5>
+                    <p class="text-muted">Tour Manager — Passionate about delivering smooth, memorable trips with a
+                        focus on local culture and experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="footer-title">Travel Smart</h5>
+                    <p>Your trusted partner for unforgettable journeys across the globe.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#destinations">Destinations</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@travelsmart.com</p>
+                </div>
+            </div>
+            <hr class="mt-4" style="border-color: rgba(255,255,255,0.1);">
+            <p class="text-center mb-0">&copy; 2025 Travel Smart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

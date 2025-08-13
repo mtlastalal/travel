@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Smart</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero-destinations {
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        .hero-destinations h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        /* Destination Cards */
+        .destination-card {
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .destination-card img {
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Highlight Search Result */
+        .highlight {
+            border: 3px solid #007bff;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 50px 0 20px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .social-icons a {
+            font-size: 18px;
+            margin-right: 10px;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            background: #222;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Travel Smart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transport.html">Transport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tripcatalog.html">Trip Catalog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-destinations mt-5">
+        <h1>Explore Our Destinations</h1>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <form class="row g-3" id="searchForm">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search for a destination...">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option selected>Filter by Region</option>
+                        <option>Asia</option>
+                        <option>Europe</option>
+                        <option>America</option>
+                        <option>Africa</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary w-100" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="destinationsList">
+                <!-- Maldives -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="card-img-top"
+                            alt="Maldives">
+                        <div class="card-body">
+                            <h5 class="card-title">Maldives</h5>
+                            <p class="card-text">Experience the Maldives, a tropical paradise with over a thousand
+                                islands offering turquoise lagoons, vibrant coral reefs, and luxurious overwater villas.
+                                Perfect for honeymoons, diving adventures, or simply basking under the sun.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiss Alps -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" class="card-img-top"
+                            alt="Swiss Alps">
+                        <div class="card-body">
+                            <h5 class="card-title">Swiss Alps</h5>
+                            <p class="card-text">The Swiss Alps offer breathtaking views of snow-capped peaks, charming
+                                villages, and pristine alpine lakes. Whether skiing in winter or hiking in summer, the
+                                region promises unforgettable outdoor adventures and cozy mountain chalets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paris -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1533050487297-09b450131914" class="card-img-top"
+                            alt="Paris">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris</h5>
+                            <p class="card-text">Discover Paris, the city of romance, art, and history. Stroll along the
+                                Seine, admire world-class museums like the Louvre, and enjoy authentic French cuisine in
+                                charming cafés with the Eiffel Tower as your backdrop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" class="card-img-top"
+                            alt="Dubai">
+                        <div class="card-body">
+                            <h5 class="card-title">Dubai</h5>
+                            <p class="card-text">Dubai is a dazzling blend of modern luxury and Arabian tradition. Shop
+                                in opulent malls, marvel at the Burj Khalifa, and explore the golden desert dunes for
+                                thrilling adventures under the endless sky.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tokyo -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" class="card-img-top"
+                            alt="Tokyo">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokyo</h5>
+                            <p class="card-text">Tokyo is a vibrant metropolis where ancient temples meet futuristic
+                                skyscrapers. Savor fresh sushi, explore neon-lit streets, visit traditional shrines, and
+                                immerse yourself in Japan’s unique blend of culture and technology.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New York -->
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" class="card-img-top"
+                            alt="New York">
+                        <div class="card-body">
+                            <h5 class="card-title">New York</h5>
+                            <p class="card-text">The energy of New York City is unmatched. From the bright lights of
+                                Times Square to the serenity of Central Park, explore iconic landmarks, Broadway shows,
+                                world-class dining, and diverse neighborhoods full of life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-5">
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="footer-title">Travel Smart</h5>
+                    <p>Your trusted partner for unforgettable journeys across the globe.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@travelsmart.com</p>
+                </div>
+            </div>
+            <hr class="mt-4" style="border-color: rgba(255,255,255,0.1);">
+            <p class="text-center mb-0">&copy; 2025 Travel Smart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Search Script -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Remove previous highlights
+            document.querySelectorAll('.destination-card').forEach(card => card.classList.remove('highlight'));
+
+            let searchValue = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!searchValue) return;
+
+            let found = false;
+            document.querySelectorAll('.destination-card').forEach(card => {
+                let title = card.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(searchValue)) {
+                    card.classList.add('highlight');
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    found = true;
+                }
+            });
+
+            if (!found) {
+                alert('Destination not found!');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
